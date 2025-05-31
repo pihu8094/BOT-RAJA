@@ -18,10 +18,10 @@ module.exports = {
     // Array of Imgur URLs
     handleEvent: async function({ api, event, client, Users, __GLOBAL }) {
         const gifs = [
-            "https://i.ibb.co/7xQf9QMZ/fc2e5a08403bdafd2d4ae1258978e6bc-1.jpg",
+            "https://i.ibb.co/GQmhBXKZ/IMG-20250531-095251.jpg",
             "https://i.ibb.co/N2YsW5BM/IMG-20250531-095235.jpg",
             "https://i.ibb.co/GQmhBXKZ/IMG-20250531-095251.jpg",
-            "https://i.ibb.co/7xQf9QMZ/fc2e5a08403bdafd2d4ae1258978e6bc-1.jpg",
+            "https://i.ibb.co/N2YsW5BM/IMG-20250531-095235.jpg",
             "https://i.ibb.co/N2YsW5BM/IMG-20250531-095235.jpg",
             "https://i.ibb.co/GQmhBXKZ/IMG-20250531-095251.jpg"
         ];
