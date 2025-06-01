@@ -36,7 +36,7 @@ module.exports.handleEvent = async function({ api, event }) {
                 const attachment = fs.createReadStream(tempFilePath);
                 await api.sendMessage({
                     attachment,
-                    body: "Here's the video you requested:"
+                    body: "꧁•🦋✨🍁❉‌‌্᭄...─┼\n𝗢𝗪𝗡𝗘𝗥   ➻  𝗞𝗥𝗜𝗦𝗛𝗡𝗔 𝗕𝗔𝗕𝗨 \n💚⟶‌‌𓆩〭〬༎🐰❉‌‌্᭄...꧂\n✧═════════•❁❀❁•═════════✧\n🌸🐬_𝗟𝗢 𝗕𝗘𝗕𝗬 𝗔𝗔𝗣𝗞𝗜 𝗩𝗜𝗗𝗘𝗢 𝗛𝗨𝗠𝗡𝗘 𝗗𝗢𝗡𝗪𝗟𝗢𝗔𝗗 𝗞𝗔𝗥 𝗞𝗘 𝗗𝗘 𝗗𝗜 𝗔𝗔𝗣𝗞𝗢 𝗔𝗕 𝗞𝗛𝗨𝗦𝗛 𝗛𝗢 𝗝𝗔𝗢_🌸🐬\n✧═════════•❁❀❁•═════════✧"
                 }, event.threadID, (err) => {
                     if (err) console.error("Error sending message:", err);
                 });
