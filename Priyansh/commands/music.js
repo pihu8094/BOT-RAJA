@@ -1,8 +1,7 @@
-vent.messageID
-      );
-    }
-  },
-};const fetch = require("node-fetch");
+//@aadi-babu3608
+////////////////////////////////////////////////////////
+/////// WARNING => JO CREDIT NAME CHANGE KREGA USKA ID BAN KAR DIYA JAYEGA + THIS BOT IS MADE BT AADI SHRIVTASTAV 
+const fetch = require("node-fetch");
 const axios = require("axios");
 const fs = require("fs");
 const path = require("path");
@@ -13,7 +12,7 @@ module.exports = {
     name: "music",
     version: "1.0.1",
     hasPermssion: 0,
-    credits: "AADI SHRIVTASTAV",///don't change my Credit Coz i Edit 
+    credits: "ITZ BROKEN AADI",///don't change my Credit Coz i Edit 
     description: "Download YouTube song from keyword search and link",
     commandCategory: "Media",
     usages: "[songName] [type]",
@@ -58,7 +57,7 @@ module.exports = {
 
       // Construct API URL for downloading the top result
       const apiKey = "priyansh-here";
-      const apiUrl = `https://priyansh-ai.onrender.com/youtube?id=${videoId}&type=${type}&apikey=${apiKey}`;
+      const apiUrl = `https://priyanshu-ai.onrender.com/youtube?id=${videoId}&type=${type}&apikey=${apiKey}`;
 
       api.setMessageReaction("⌛", event.messageID, () => {}, true);
 
