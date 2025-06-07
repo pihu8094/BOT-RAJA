@@ -52,7 +52,7 @@ module.exports.handleEvent = async function({ api, event, Currencies, Users, get
 		const moduleName = this.config.name;
 
     var background = [
-  "https://imgur.com/4B5nncg.jpeg"
+  "https://i.ibb.co/mrf3JGg6/received-561110593405573.png"
   ];
     var rd = background[Math.floor(Math.random() * background.length)];
     let getAvtmot = (
