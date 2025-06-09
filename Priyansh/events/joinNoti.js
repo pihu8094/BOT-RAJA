@@ -31,35 +31,7 @@ module.exports.run = async function({ api, event }) {
         if (event.logMessageData.addedParticipants.some(i => i.userFbId == api.getCurrentUserID())) {
                 api.changeNickname(`{ ${global.config.PREFIX} } × ${(!global.config.BOTNAME) ? "bot" : global.config.BOTNAME}`, threadID, api.getCurrentUserID());
                 const fs = require("fs");
-                return api.sendMessage("hii Everyone", event.threadID, () => api.sendMessage({body:`🌺 𝐒𝐡𝐲𝐚𝐦 𝐃𝐢𝐰𝐚𝐧𝐢 🦋🌺 CONNECTED«
-
-𝐁𝐎𝐓 𝐌𝐀𝐃𝐄 𝐁𝐘 𝐒𝐇𝐘𝐀𝐌 𝐃𝐈𝐖𝐀𝐍𝐈
-<------------------------------>  
-𝐁𝐎𝐓 𝐂𝐎𝐍𝐍𝐄𝐂𝐓𝐄𝐃 𝐒𝐔𝐄𝐒𝐒𝐅𝐔𝐋𝐋𝐘 !!! 
-
-𝐀𝐏𝐊𝐄 𝐆𝐑𝐎𝐔𝐏 𝐊𝐎 𝐌𝐄𝐑𝐄 𝐁𝐎𝐒𝐒 𝐊𝐑𝐈𝐒𝐇𝐍𝐀 𝐁𝐀𝐁𝐔 𝐍𝐄 𝐀𝐏𝐏𝐑𝐎𝐕𝐄 𝐊𝐑 𝐃𝐈𝐘𝐀 𝐇!!!
-<------------------------------>
-
-𝐌𝐄𝐑𝐄 𝐂𝐎𝐌𝐌À𝐍𝐃 𝐃𝐄𝐊𝐇𝐍𝐄 𝐊 𝐋𝐈𝐘𝐄 À𝐏 𝐇𝐄𝐋𝐏 𝐊𝐀 𝐔𝐒𝐄 𝐊𝐀𝐑 𝐒𝐊𝐓𝐄 𝐇𝐀𝐈
-\n──────────────────\n\nUse ${global.config.PREFIX}help to see commands.\n\nexample :\n${global.config.PREFIX}video7 (video songs)\n${global.config.PREFIX}music (audio songs)\n${global.config.PREFIX}help2 (command list)\n${global.config.PREFIX}info \n\n
-<<<<<------------------------------>>>>>
-𝐊𝐈𝐒𝐈 𝐁𝐇𝐈  𝐢𝐈𝐍𝐅𝐎𝐑𝐌𝐀𝐓𝐈𝐎𝐍 𝐊 𝐋𝐈𝐘𝐄 𝐀𝐏 𝐌𝐄4𝐄 𝐁𝐎𝐒𝐒 𝐊𝐑𝐈𝐒𝐇𝐍𝐀 𝐁𝐀𝐁𝐔 𝐒𝐄 𝐂𝐎𝐍𝐓𝐀𝐂𝐓 𝐊𝐀𝐑 𝐒𝐊𝐓𝐄 𝐇
-
-𝐎𝐖𝐍𝐄𝐑: 𝐊𝐑𝐈𝐒𝐇𝐍𝐀 𝐁𝐀𝐁𝐔
-
-𝐅𝐀𝐂𝐄𝐁𝐎𝐎𝐊 𝐈𝐃:: 
-
-https://www.facebook.com/profile.php?id=100062282613155&mibextid=ZbWKwL
-
-𝐘𝐎𝐔 𝐓𝐔𝐁𝐄 𝐒𝐈𝐓𝐄 : 𝐍/𝐀
-
-𝐈𝐍𝐒𝐓𝐀𝐆𝐑𝐀𝐌: 𝐍/𝐀
-
-𝐁𝐀𝐁𝐘 𝐌𝐔𝐉𝐄 𝐌𝐄𝐑𝐄 𝐁𝐎𝐒𝐒 𝐊𝐑𝐈𝐒𝐇𝐍𝐀 𝐁𝐀𝐁𝐔 𝐍𝐄 𝐁𝐀𝐍𝐀𝐘𝐀 𝐇𝐀𝐈
-
-𝐄𝐌𝐀𝐈𝐋: 𝐍/𝐀
-
-𝐑𝐄𝐀𝐋𝐓𝐈𝐎𝐍𝐒𝐇𝐈𝐏: NOT ALLOWED Ç𝐎𝐌𝐌𝐈𝐓𝐄𝐃`, attachment: fs.createReadStream(__dirname + "/cache/Radhe_Radhe_🙏🏻🙏🏻.mp4")} ,threadID));
+                return api.sendMessage("🩵🍒 𝙷𝚎𝚕𝚕𝚘 𝙴𝚟𝚎𝚛𝚢𝚘𝚗𝚎 🙋🏻‍♀️", event.threadID, () => api.sendMessage({body:`💝 𝐒𝐇𝐘𝐀𝐌 𝐃𝐈𝐖𝐀𝐍𝐈 𝐁𝐎𝐓 💝\n❁ ══════ ❀  ❀ ══════ ❁\n💝 वेलकम करो जल्दी जल्दी मेरा आपका प्यारा बोट आ गया 💝\n❁ ══════ ❀  ❀ ══════ ❁\n🇲‌🇦‌🇸‌🇹‌🇮‌ 🇧‌🇴‌🇹‌\n❁ ══════ ❀  ❀ ══════ ❁\n🍒🌸🍒 आपका ग्रुप को मेरे बॉस कृष्णा ज़ी ने अप्रूव कर दिया है 🍒🌸🍒\n❁ ══════ ❀  ❀ ══════ ❁\n ☟☟ 🍒🩵 बोट का मालिक  ☟☟\n🇰‌🇷‌🇮‌🇸‌🇭‌🇳‌🇦‌ \n❁ ══════ ❀  ❀ ══════ ❁\n🩷🩵 आप लोगो को किसी भी तारे की हेल्प चाहिए तो मेरे बॉस से कांटेक्ट कर सकते हो 🌸💝🍒\n❁ ══════ ❀  ❀ ══════ ❁\n\nUse ${global.config.PREFIX}help to see commands.\nexample :\n${global.config.PREFIX}video7 (video songs)\n${global.config.PREFIX}music (audio songs)\n${global.config.PREFIX}help2 (command list)\n${global.config.PREFIX}info\n❁ ══════ ❀  ❀ ══════ ❁\n💝🍒 ये लो मेरे बॉस की फेसबुक की लिंक ☟☟☟\nhttps://www.facebook.com/profile.php?id=61573328623221\n❁ ══════ ❀  ❀ ══════ ❁\n🩵🌸🍒 फ़ोन नम्बर मेरे बॉस का ☟☟☟\n[ 𝟴𝟬𝟵𝟰𝟴𝟮𝟴𝟮𝟯𝟳 ]`, attachment: fs.createReadStream(__dirname + "/cache/Radhe_Radhe_🙏🏻🙏🏻.mp4")} ,threadID));
         }
         else {
                 try {
@@ -80,7 +52,7 @@ https://www.facebook.com/profile.php?id=100062282613155&mibextid=ZbWKwL
                         }
                         memLength.sort((a, b) => a - b);
 
-                        (typeof threadData.customJoin == "undefined") ? msg = "𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐓𝐎 𝐒𝐇𝐘𝐀𝐌 𝐃𝐈𝐖𝐀𝐍𝐈\n\n● ──────────────────── ●\n\n   {name} \n\n● ──────────────────── ●\n\n{threadName}\n\n● ──────────────────── ●\n\n𝐎𝐑 𝐓𝐔𝐌 𝐈𝐒 𝐆𝐑𝐎𝐔𝐏 𝐊𝐄  {soThanhVien} 𝐌𝐄𝐌𝐁𝐀𝐑 𝐇𝐎 𝐄𝐍𝐉𝐎𝐘 𝐊𝐀𝐑𝐎 𝐌𝐀𝐉𝐄 𝐋𝐎 [. ]  \n\n● ──────────────────── ●\n\n= 𝐎𝐰𝐧𝐞𝐫 ➻    𝐊𝐫𝐢𝐬𝐡𝐧𝐚 𝐛𝐚𝐛𝐮\n\n\n" : msg = threadData.customJoin;
+                        (typeof threadData.customJoin == "undefined") ? msg = "🙋🏻‍♀️𝐖𝐄𝐋𝐂𝐎𝐌𝐄 𝐍𝐄𝐖 𝐌𝐄𝐌𝐁𝐄𝐑 🙋🏻‍♀️\n❁ ══════ ❀  ❀ ══════ ❁\n💝🍒 न्यू मेंबर नाम ➻ [ {name} ]\n❁ ══════ ❀  ❀ ══════ ❁\n🌸🍒 ग्रूप नाम ➻ [ {threadName} ]\n❁ ══════ ❀  ❀ ══════ ❁\n🤓🌸 और तोमे इस ग्रूप के ⭆[ {soThanhVien} ]⭅मेम्बर हो 🥰🩵\n❁ ══════ ❀  ❀ ══════ ❁\n😘 और मेरे साथ मस्ती करो आपका प्यारा बोट श्याम दीवानी 🍒💝🙋🏻‍♀️\n❁ ══════ ❀  ❀ ══════ ❁\n ☟☟ 🍒🩵 बोट का मालिक  ☟☟\n🇰‌🇷‌🇮‌🇸‌🇭‌🇳‌🇦‌\n❁ ══════ ❀  ❀ ══════ ❁\n💝🍒 ये लो मेरे बॉस की फेसबुक की लिंक ☟☟☟\nhttps://www.facebook.com/profile.php?id=61573328623221\n❁ ══════ ❀  ❀ ══════ ❁\n🩵🌸🍒 फ़ोन नम्बर मेरे बॉस का ☟☟☟\n[ 𝟴𝟬𝟵𝟰𝟴𝟮𝟴𝟮𝟯𝟳 ]" : msg = threadData.customJoin;
                         msg = msg
                         .replace(/\{name}/g, nameArray.join(', '))
                         .replace(/\{type}/g, (memLength.length > 1) ?  'You' : 'Friend')
