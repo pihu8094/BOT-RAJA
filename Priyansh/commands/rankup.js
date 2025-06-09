@@ -52,7 +52,7 @@ module.exports.handleEvent = async function({ api, event, Currencies, Users, get
                 const moduleName = this.config.name;
 
     var background = [
-  "https://i.ibb.co/DftDqfLR/20250609-211150.jpg"
+  "https://i.ibb.co/m5LjSwm8/4B5nncg.jpg"
 ];
     var rd = background[Math.floor(Math.random() * background.length)];
     let getAvtmot = (
@@ -99,7 +99,7 @@ module.exports.languages = {
                 "on": "on",
                 "off": "off",
                 "successText": "success notification rankup!",
-                "levelup": "💝🩵💛[ ${name} ]❤️‍🔥🌺🌸\n\nबेबी आपका एक और लेवल [ {level} ] हो गया अब खुश🤓 हो जाओ 🍒🩵💝\n\n❁══❀ ༒𓆩𝙺𝚁𝙸𝚂𝙷𝙽𝙰✯𝙱𝙰𝙱𝚄𓆪༒ ❀══❁",
+                "levelup": "💝🩵💛[ ${name} ]❤️‍🔥🌺🌸\n\n❁══❀ 🍒🩵💝 बेबी आपका एक और लेवल [ {level} ] 💝 हो गया अब खुश🤓 हो जाओ 🍒🩵💝 ❁══❀\n\n❁══❀ ༒𓆩𝙺𝚁𝙸𝚂𝙷𝙽𝙰✯𝙱𝙰𝙱𝚄𓆪༒ ❀══❁",
         }
 }
 
