@@ -4,7 +4,7 @@ module.exports.config = {
   version: "1.0.1",
   hasPermssion: 0,
   credits: "PREM BABU",
-  description: "goibot",
+  description: "bot2",
   commandCategory: "Noprefix",
   usages: "noprefix",
   cooldowns: 5,
