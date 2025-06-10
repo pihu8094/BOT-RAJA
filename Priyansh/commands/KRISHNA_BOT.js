@@ -464,13 +464,13 @@ if ((event.body.toLowerCase() == "kamina") || (event.body.toLowerCase() == "Kami
   mess = "{name}"
 
 
-   if (event.body.includes("Bot") == 1 ||
-     (event.body.includes("bot") == 1 ||
-     (event.body.includes("BOT") == 1 ||
+   if (event.body.includes("janu") == 1 ||
+     (event.body.includes("Janu") == 1 ||
+     (event.body.includes("JANU") == 1 ||
      (event.body.includes("BABU") == 1 ||
      (event.body.includes("Babu") == 1 ||
      (event.body.includes("babu") == 1 ||
-     (event.body.includes("boot") == 1 ||
+     (event.body.includes("BOT") == 1 ||
      (event.body.includes("Oye") == 1 ||
      (event.body.includes("oye") == 1 ))))))))) {
       var msg = {
@@ -482,7 +482,7 @@ if ((event.body.toLowerCase() == "kamina") || (event.body.toLowerCase() == "Kami
 🍒🩵 [  ${rand}  ] 🌸🥀🍒                                        
 
 
-                      *★᭄𝗢𝘄𝗻𝗲𝗿 ཫ.                  ༄𒁍≛⃝𝐌𝐑.𝐒𝐇𝐘𝐀𝐌 𝐃𝐈𝐖𝐀𝐍𝐈💫🍒💐🩵`
+                      *★᭄𝗢𝘄𝗻𝗲𝗿 ཫ.                  ༄𒁍≛⃝𝐌𝐈𝐒𝐒.𝐒𝐇𝐘𝐀𝐌 𝐃𝐈𝐖𝐀𝐍𝐈💫🍒💐🩵`
   }
   return api.sendMessage(msg, threadID, messageID);
 };
