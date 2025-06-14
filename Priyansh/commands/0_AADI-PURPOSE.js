@@ -66,9 +66,9 @@ module.exports.run = async function ({ event, api, args }) {
   const fs = global.nodemodule["fs-extra"];
   const { threadID, messageID, senderID } = event;
   const mention = Object.keys(event.mentions);
-  if (!mention[0]) return api.sendMessage("Please mention 1 person.", threadID, messageID);
+  if (!mention[0]) return api.sendMessage("💐🐬🌸__ 𝙺𝙸𝚂𝙸 𝙴𝙺 𝙺𝙾 𝙼𝙴𝙽𝚂𝙾𝙸𝙽 𝙺𝙰𝚁𝙾 𝙽𝙷𝙸 𝚃𝙾 𝙺𝚁𝙸𝚂𝙷𝙽𝙰 𝙱𝙰𝙱𝚄 𝚂𝙴 𝙿𝚄𝙲𝙷 𝙻𝙾___🙋🐥🧚", threadID, messageID);
   else {
       const one = senderID, two = mention[0];
-      return makeImage({ one, two }).then(path => api.sendMessage({ body: "", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+      return makeImage({ one, two }).then(path => api.sendMessage({ body: "𝐎𝐰𝐧𝐞𝐫 ➻   💐𝐌𝐑. 𝐊𝐑𝐈𝐒𝐇𝐍𝐀💐\n✧═════════•❁❀❁•═════════✧\n[•||•●•||•┼┼──🌸,,💟..#_लो बेबी पट गयी ये लड़की ।\n अब मत बोलना की मेरे लिए लड़की लाओ ढूंढ कर •||•🐬•||•]]\n✧═════════•❁❀❁•═════════✧", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
   }
 }
