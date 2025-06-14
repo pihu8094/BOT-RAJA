@@ -27,7 +27,7 @@ module.exports.onLoad = async() => {
 
 async function makeImage({ one, two }) {
   const fs = global.nodemodule["fs-extra"];
-  const pathnodemodule["path"];
+  const path = global.nodemodule["path"];
   const axios = global.nodemodule["axios"]; 
   const jimp = global.nodemodule["jimp"];
   const __root = path.resolve(__dirname, "cache", "canvas");
@@ -69,6 +69,6 @@ module.exports.run = async function ({ event, api, args }) {
   if (!mention[0]) return api.sendMessage("💐🐬🌸__ 𝙺𝙸𝚂𝙸 𝙴𝙺 𝙺𝙾 𝙼𝙴𝙽𝚂𝙾𝙸𝙽 𝙺𝙰𝚁𝙾 𝙽𝙷𝙸 𝚃𝙾 𝙺𝚁𝙸𝚂𝙷𝙽𝙰 𝙱𝙰𝙱𝚄 𝚂𝙴 𝙿𝚄𝙲𝙷 𝙻𝙾___🙋🐥🧚", threadID, messageID);
   else {
       const one = senderID, two = mention[0];
-      return makeImage({ one, two }).then(path => api.sendMessage({ body: "`𝐎𝐰𝐧𝐞𝐫 ➻   💐𝐌𝐑. 𝐊𝐑𝐈𝐒𝐇𝐍𝐀💐\n✧═════════•❁❀❁•═════════✧\n[•||•●•||•┼┼──🌸,,💟..#_लो बेबी आपकी जोड़ी बना दी।\nअब मत बोलना की मुझे गर्लफ्रेंड लाओ •||•🐬•||•]]\n✧═════════•❁❀❁•═════════✧", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
-    }
+      return makeImage({ one, two }).then(path => api.sendMessage({ body: "𝐎𝐰𝐧𝐞𝐫 ➻   💐𝐌𝐑. 𝐊𝐑𝐈𝐒𝐇𝐍𝐀💐\n✧═════════•❁❀❁•═════════✧\n[•||•●•||•┼┼──🌸,,💟..#_लो बेबी आपकी जोड़ी बना दी।\nअब मत बोलना की मुझे गर्लफ्रेंड लाओ •||•🐬•||•]]\n✧═════════•❁❀❁•═════════✧", attachment: fs.createReadStream(path) }, threadID, () => fs.unlinkSync(path), messageID));
+  }
 }
