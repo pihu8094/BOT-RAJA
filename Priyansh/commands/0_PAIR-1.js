@@ -16,9 +16,9 @@ module.exports.onLoad = async() => {
     const { existsSync, mkdirSync } = global.nodemodule["fs-extra"];
     const { downloadFile } = global.utils;
     const dirMaterial = __dirname + `/cache/canvas/`;
-    const path = resolve(__dirname, 'cache/canvas', 'krishna.png');
+    const path = resolve(__dirname, 'cache/canvas', 'lovely.png');
     if (!existsSync(dirMaterial + "canvas")) mkdirSync(dirMaterial, { recursive: true });
-    if (!existsSync(path)) await downloadFile("https://i.ibb.co/dCkBDDs/krishna.jpg", path);
+    if (!existsSync(path)) await downloadFile("https://i.ibb.co/h1fnNKSr/lovely.jpg", path);
 }
 
 async function makeImage({ one, two }) {
@@ -28,7 +28,7 @@ async function makeImage({ one, two }) {
     const jimp = global.nodemodule["jimp"];
     const __root = path.resolve(__dirname, "cache", "canvas");
 
-    let pairing_img = await jimp.read(__root + "/krishna.png");
+    let pairing_img = await jimp.read(__root + "/lovely.png");
     let pathImg = __root + `/pairing_${one}_${two}.png`;
     let avatarOne = __root + `/avt_${one}.png`;
     let avatarTwo = __root + `/avt_${two}.png`;
