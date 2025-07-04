@@ -18,12 +18,11 @@ module.exports = {
     // Array of Imgur URLs
     handleEvent: async function({ api, event, client, Users, __GLOBAL }) {
         const gifs = [
-            "https://i.ibb.co/jktwZhxF/20250417-211207.jpg",
-            "https://i.ibb.co/bMPLvcv3/20250525-105809.jpg",
-            "https://i.ibb.co/jktwZhxF/20250417-211207.jpg",
-            "https://i.ibb.co/bMPLvcv3/20250525-105809.jpg",
-            "https://i.ibb.co/jktwZhxF/20250417-211207.jpg",
-            "https://i.ibb.co/bMPLvcv3/20250525-105809.jpg"
+            "https://i.imgur.com/I5xvyJT.jpeg",
+                "https://i.imgur.com/EpHd1aN.jpeg",
+                "https://i.imgur.com/AOq0qZU.jpeg",
+                "https://i.imgur.com/bflHF9o.jpeg",
+                "https://i.imgur.com/W6YkeRa.jpeg"
         ];
 
         const message = "𝐖𝐞𝐥𝐜𝐨𝐦𝐞 𝐓𝐨 𝐁𝐨𝐭 𝐢𝐃 🤖\n\n● ────────────────── ●\n\n𝐌𝐘 𝐎𝐰𝐧𝐞𝐑 𝐊𝐫𝐢𝐬𝐡𝐧𝐚 𝐁𝐚𝐁𝐮 .... < 𝐄𝐃𝐈𝐓 > .... 🦋🌿𝐀𝐧𝐤𝐇𝐨 𝐌𝐞 𝐏𝐲𝐚𝐑 𝐃𝐢𝐋 𝐌𝐞 𝐊𝐡𝐮𝐌𝐚𝐫 🌬️🌍 ••𝐊𝐚𝐇𝐢 𝐏𝐲𝐚𝐑 𝐓𝐨 𝐍𝐚𝐇𝐢 𝐇𝐨 𝐆𝐚𝐘𝐚 𝐌𝐞𝐫𝐄 𝐊𝐫𝐢𝐬𝐡𝐧𝐚 𝐁𝐚𝐁𝐮 𝐣𝐢 𝐒𝐞 >³••🕊️🍎\n\n● ────────────────── ●\n\n𝐎𝐰𝐧𝐞𝐫 ➻  𝐊𝐫𝐢𝐬𝐡𝐧𝐚 𝐛𝐚𝐛𝐮";
@@ -42,7 +41,7 @@ module.exports = {
                     attachment: fs.createReadStream(downloadPath)
                 };
                 api.sendMessage(msg, threadID, messageID);
-                api.setMessageReaction("💝", event.messageID, (err) => {}, true);
+                api.setMessageReaction("👑", event.messageID, (err) => {}, true);
             });
         }
     },
