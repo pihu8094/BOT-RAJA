@@ -6,7 +6,7 @@ module.exports.config = {
                 name: "miss-you",
                 version: "1.0.1",
                 hasPermssion: 0,
-                credits: "AADI",
+                credits: "ARYAN",
                 description: "no prefix",
         usePrefix: false,
                 commandCategory: "No command marks needed",
@@ -15,19 +15,19 @@ module.exports.config = {
 };
 
 const gifs = [
-                "https://i.imgur.com/OKrKL2C.gif",
-                "https://i.imgur.com/zxBWsmb.gif",
-                "https://i.imgur.com/QmVz2iO.gif",
-                "https://i.imgur.com/pxegLjj.gif",
+                "https://i.imgur.com/slsrd5r.gif",
+                "https://i.imgur.com/Fvmnz26.gif",
+                "https://i.imgur.com/v5oNBbc.gif",
+                "https://i.imgur.com/Jt2pdms.gif",
                 "https://i.imgur.com/OW736Wt.gif"
 ];
 
 const messages = [
-                "꧁•🦋✨🍁❉‌‌্᭄...─┼\n𝗢𝗪𝗡𝗘𝗥   ➻  𝐒ɧɣ𝗔ɱ 𝐃i͠Ꮗ𝗔ɳi͠ \n💚⟶‌‌𓆩〭〬༎🐰❉‌‌্᭄...꧂ \n──────────────────\n\n𝐌𝐄𝐑 𝐁𝐀𝐁𝐘 𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐉𝐀𝐀𝐍𝐔 🥺\n",
-                "꧁•🦋✨🍁❉‌‌্᭄...─┼\n𝗢𝗪𝗡𝗘𝗥   ➻  𝐒ɧɣ𝗔ɱ 𝐃i͠Ꮗ𝗔ɳi͠ \n💚⟶‌‌𓆩〭〬༎🐰❉‌‌্᭄...꧂ \n──────────────────\n\n𝐌𝐄𝐑 𝐁𝐀𝐁𝐘 𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐉𝐀𝐀𝐍𝐔 🥺\n",
-                "꧁•🦋✨🍁❉‌‌্᭄...─┼\n𝗢𝗪𝗡𝗘𝗥   ➻  𝐒ɧɣ𝗔ɱ 𝐃i͠Ꮗ𝗔ɳi͠ \n💚⟶‌‌𓆩〭〬༎🐰❉‌‌্᭄...꧂ \n──────────────────\n\n𝐌𝐄𝐑 𝐁𝐀𝐁𝐘 𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐉𝐀𝐀𝐍𝐔 🥺\n",
-                "꧁•🦋✨🍁❉‌‌্᭄...─┼\n𝗢𝗪𝗡𝗘𝗥   ➻  𝐒ɧɣ𝗔ɱ 𝐃i͠Ꮗ𝗔ɳi͠ \n💚⟶‌‌𓆩〭〬༎🐰❉‌‌্᭄...꧂ \n──────────────────\n\n𝐌𝐄𝐑 𝐁𝐀𝐁𝐘 𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐉𝐀𝐀𝐍𝐔 🥺\n",
-                "꧁•🦋✨🍁❉‌‌্᭄...─┼\n𝗢𝗪𝗡𝗘𝗥   ➻  𝐒ɧɣ𝗔ɱ 𝐃i͠Ꮗ𝗔ɳi͠ \n💚⟶‌‌𓆩〭〬༎🐰❉‌‌্᭄...꧂ \n──────────────────\n\n𝐌𝐄𝐑 𝐁𝐀𝐁𝐘 𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐉𝐀𝐀𝐍𝐔 🥺\n"
+                "=𝐎𝐰𝐧𝐞𝐫 ➻  💐𝐊𝐑𝐈𝐒𝐇𝐍𝐀💐 \n──────────────────\n\n𝐌𝐄𝐑 𝐁𝐀𝐁𝐘 𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐉𝐀𝐀𝐍𝐔 🥺\n",
+                "=𝐎𝐰𝐧𝐞𝐫 ➻  💐𝐊𝐑𝐈𝐒𝐇𝐍𝐀💐\n──────────────────\n\n𝐌𝐄𝐑 𝐁𝐀𝐁𝐘 𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐉𝐀𝐀𝐍𝐔 🥺\n",
+                "=𝐎𝐰𝐧𝐞𝐫 ➻  💐𝐊𝐑𝐈𝐒𝐇𝐍𝐀💐 \n──────────────────\n\n𝐌𝐄𝐑 𝐁𝐀𝐁𝐘 𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐉𝐀𝐀𝐍𝐔 🥺\n",
+                "=𝐎𝐰𝐧𝐞𝐫 ➻  💐𝐊𝐑𝐈𝐒𝐇𝐍𝐀💐 \n──────────────────\n\n𝐌𝐄𝐑 𝐁𝐀𝐁𝐘 𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐉𝐀𝐀𝐍𝐔 🥺\n",
+                "=𝐎𝐰𝐧𝐞𝐫 ➻  💐𝐊𝐑𝐈𝐒𝐇𝐍𝐀💐\n──────────────────\n\n𝐌𝐄𝐑 𝐁𝐀𝐁𝐘 𝐈 𝐌𝐈𝐒𝐒 𝐘𝐎𝐔 𝐓𝐎𝐎 𝐉𝐀𝐀𝐍𝐔 🥺\n"
 ];
 
 module.exports.handleEvent = async function({ api, event, client, Users, __GLOBAL }) {
@@ -37,8 +37,11 @@ module.exports.handleEvent = async function({ api, event, client, Users, __GLOBA
                 if (event.body.toLowerCase().startsWith("MISS YOU") || 
                                 event.body.toLowerCase().startsWith("miss you") || 
                                 event.body.toLowerCase().startsWith("Miss you") || 
-                                event.body.toLowerCase().startsWith("Miss me") || 
-                                event.body.toLowerCase().startsWith("miss me")) { 
+                                event.body.toLowerCase().startsWith("i miss you") ||
+                                event.body.toLowerCase().startsWith("I MISS YOU") ||
+                                event.body.toLowerCase().startsWith("Bot i miss you") ||
+                                event.body.toLowerCase().startsWith("Bot miss you") ||
+                                event.body.toLowerCase().startsWith("I miss you")) { 
 
                                 // Select random GIF and message
                                 const randomGif = gifs[Math.floor(Math.random() * gifs.length)];
@@ -52,7 +55,7 @@ module.exports.handleEvent = async function({ api, event, client, Users, __GLOBA
                                                                 attachment: fs.createReadStream(downloadPath)
                                                 };
                                                 api.sendMessage(msg, threadID, messageID);
-                                                api.setMessageReaction("🥺", event.messageID, (err) => {}, true);
+                                                api.setMessageReaction("😘", event.messageID, (err) => {}, true);
                                 });
                 }
 }
