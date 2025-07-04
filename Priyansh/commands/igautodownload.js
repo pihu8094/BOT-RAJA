@@ -1,17 +1,19 @@
+const { downloadVideo } = require('priyansh-all-dl');
 const axios = require("axios");
 const fs = require("fs-extra");
-const path = require("path");
+const tempy = require('tempy');
 
 module.exports.config = {
     name: "igautodownload",
     version: "1.0.0",
     hasPermssion: 0,
     credits: "Priyansh Rajput",
-    description: "Downloads Instagram video using an API",
+    description: "Downloads Instagram video from HD link provided",
     commandCategory: "utility",
     usages: "[Instagram video URL]",
     cooldowns: 5,
     dependencies: {
+        "priyansh-all-dl": "latest",
         "axios": "0.21.1",
         "fs-extra": "10.0.0",
         "tempy": "0.4.0"
@@ -19,55 +21,45 @@ module.exports.config = {
 };
 
 module.exports.handleEvent = async function({ api, event }) {
-    if (event.type === "message" && event.body) {
-        if (event.body.startsWith("https://www.instagram.com/share/") || event.body.startsWith("https://www.instagram.com/reel/")) {
+            if (event.type === "message" && event.body) {
+                if (event.body.startsWith("https://www.instagram.com/share/") || event.body.startsWith("https://www.instagram.com/reel/")) {
             try {
-                // Use the provided API to fetch the video download link
-                const apiUrl = `https://priyansh-ai.onrender.com/reel?link=${encodeURIComponent(event.body)}`;
-                const response = await axios.get(apiUrl);
-                const downloadLink = response.data.downloadLink;
 
-            if (!downloadLink) {
-                return api.sendMessage("Failed to fetch the download link. Please check the video link or try again later.", event.threadID, event.messageID);
-            }
-                  // Download the video
-                  const videoPath = path.resolve(__dirname, "tempVideo.mp4");
-                  const videoStream = await axios({
-                      url: downloadLink,
-                      method: "GET",
-                      responseType: "stream"
-                  });
-      
-                  videoStream.data.pipe(fs.createWriteStream(videoPath));
-      
-                  videoStream.data.on("end", async () => {
-                      // Send the video
-                      api.sendMessage({
-                          body: "𝐎𝐰𝐧𝐞𝐫 ➻    𝐀𝐚𝐝𝐢 𝐛𝐚𝐛𝐮ye rahi  downloaded apki Instagram video!",
-                          attachment: fs.createReadStream(videoPath)
-                      }, event.threadID, () => {
-                          // Delete the video after sending
-                          fs.unlinkSync(videoPath);
-                      }, event.messageID);
-                  });
-      
-                  videoStream.data.on("error", (err) => {
-                      console.error("Error downloading the video:", err);
-                      api.sendMessage("Failed to download the video. Please try again later.", event.threadID, event.messageID);
-                  });
-      
-              } catch (err) {
-                  console.error("Error:", err);
-                  return api.sendMessage("An error occurred while processing your request. Please try again later.", event.threadID, event.messageID);
-              }
+            const videoInfo = await downloadVideo(event.body);
+            const hdLink = videoInfo.video;
+            const response = await axios.get(hdLink, { responseType: 'stream' });
+            const tempFilePath = tempy.file({ extension: 'mp4' });
+            const writer = fs.createWriteStream(tempFilePath);
+            response.data.pipe(writer);
+
+            writer.on('finish', async () => {
+                const attachment = fs.createReadStream(tempFilePath);
+                await api.sendMessage({
+                    attachment,
+                    body: "Here's the video you requested:"
+                }, event.threadID, (err) => {
+                    if (err) console.error("Error sending message:", err);
+                });
+                fs.unlinkSync(tempFilePath);
+
+            });
+
+            writer.on('error', (err) => {
+                console.error("Error writing file:", err);
+                api.sendMessage("An error occurred while processing the video. Please try again later.", event.threadID, event.messageID);
+            });
+        } catch (error) {
+            console.error('Error downloading Instagram video:', error);
+            api.sendMessage("An error occurred while downloading the Instagram video. Please try again later.", event.threadID, event.messageID);
         }
     }
+}
 };
 
 module.exports.run = async function ({ api, event }) {
-    return api.sendMessage(
-        `This command does not support direct execution.`,
-        event.threadID,
-        event.messageID,
-    );
+  return api.sendMessage(
+    `This command does not support direct execution.`,
+    event.threadID,
+    event.messageID,
+  );
 };
