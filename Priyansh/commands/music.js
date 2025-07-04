@@ -1,6 +1,3 @@
-//@aadi-babu3608
-////////////////////////////////////////////////////////
-/////// WARNING => JO CREDIT NAME CHANGE KREGA USKA ID BAN KAR DIYA JAYEGA + THIS BOT IS MADE BT AADI SHRIVTASTAV 
 const fetch = require("node-fetch");
 const axios = require("axios");
 const fs = require("fs");
@@ -12,7 +9,7 @@ module.exports = {
     name: "music",
     version: "1.0.1",
     hasPermssion: 0,
-    credits: "ITZ BROKEN AADI",///don't change my Credit Coz i Edit 
+    credits: "AADI SHRIVTASTAV",///don't change my Credit Coz i Edit 
     description: "Download YouTube song from keyword search and link",
     commandCategory: "Media",
     usages: "[songName] [type]",
@@ -38,7 +35,7 @@ module.exports = {
     }
 
     const processingMessage = await api.sendMessage(
-      "✅ Processing your request. Please wait...",
+      "✅Apki Request Jari Hai Please wait...",
       event.threadID,
       null,
       event.messageID
@@ -94,7 +91,8 @@ module.exports = {
       await api.sendMessage(
         {
           attachment: fs.createReadStream(downloadPath),
-          body: `🖤 Title: ${topResult.title}\n\n Here is your ${type === "audio" ? "audio" : "video"} 🎧:`,
+          body: `🖤 Title: ${topResult.title}\n\n  »»𝑶𝑾𝑵𝑬𝑹««★™  »»𝐊𝐑𝐈𝐒𝐇𝐍𝐀 𝐁𝐀𝐁𝐔««
+          🥀𝒀𝑬 𝑳𝑶 𝑩𝑨𝑩𝒀 𝑨𝑷𝑲𝑰💞 ${type === "audio" ? "audio" : "video"} 🎧:`,
         },
         event.threadID,
         () => {
