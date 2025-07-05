@@ -1,1 +1,113 @@
-function _0x590b(_0x2a7b5f,_0x178f81){const _0x4fec52=_0x4fec();return _0x590b=function(_0x590b11,_0x3f5ca4){_0x590b11=_0x590b11-0x179;let _0x5ef5ea=_0x4fec52[_0x590b11];return _0x5ef5ea;},_0x590b(_0x2a7b5f,_0x178f81);}const _0x471b51=_0x590b;(function(_0x56cea4,_0x2e995e){const _0x2d4a3f=_0x590b,_0x1eaf6e=_0x56cea4();while(!![]){try{const _0x1d59d2=-parseInt(_0x2d4a3f(0x189))/0x1*(parseInt(_0x2d4a3f(0x190))/0x2)+-parseInt(_0x2d4a3f(0x17e))/0x3*(-parseInt(_0x2d4a3f(0x191))/0x4)+parseInt(_0x2d4a3f(0x17a))/0x5+parseInt(_0x2d4a3f(0x187))/0x6*(parseInt(_0x2d4a3f(0x17d))/0x7)+parseInt(_0x2d4a3f(0x199))/0x8+parseInt(_0x2d4a3f(0x17f))/0x9+parseInt(_0x2d4a3f(0x18f))/0xa*(-parseInt(_0x2d4a3f(0x194))/0xb);if(_0x1d59d2===_0x2e995e)break;else _0x1eaf6e['push'](_0x1eaf6e['shift']());}catch(_0x2ab32b){_0x1eaf6e['push'](_0x1eaf6e['shift']());}}}(_0x4fec,0x2f273),module[_0x471b51(0x193)]={'config':{'name':_0x471b51(0x185),'version':'1.3.0','hasPermssion':0x0,'credits':_0x471b51(0x188),'description':'Automatically\x20detects\x20links\x20in\x20messages\x20and\x20downloads\x20the\x20file.','commandCategory':_0x471b51(0x198),'usages':'','cooldowns':0x5},'run':async function({events:_0x1794f6,args:_0x4198eb}){},'handleEvent':async function({api:_0x2dfaf1,event:_0x544f2e,args:_0x1ffbda}){const _0x5bea74=_0x471b51,_0x434af9=require('axios'),_0xde4e10=require(_0x5bea74(0x182)),_0x17956b=require(_0x5bea74(0x184)),_0x40c2b4=_0x544f2e[_0x5bea74(0x17c)]?_0x544f2e[_0x5bea74(0x17c)]:'',_0x4f3b71=_0x40c2b4[_0x5bea74(0x197)](),{alldown:_0x141355}=require(_0x5bea74(0x192));if(_0x4f3b71[_0x5bea74(0x18b)]('https://')){_0x2dfaf1[_0x5bea74(0x179)]('📿',_0x544f2e[_0x5bea74(0x18e)],_0x3efd50=>{},!![]);const _0x1241b9=await _0x141355(_0x40c2b4);console['log'](_0x1241b9);const {low:_0x4ad661,high:_0x406f68,title:_0xed4207}=_0x1241b9[_0x5bea74(0x195)];_0x2dfaf1[_0x5bea74(0x179)](_0x5bea74(0x196),_0x544f2e['messageID'],_0x586012=>{},!![]);const _0x233198=(await _0x434af9[_0x5bea74(0x186)](_0x406f68,{'responseType':_0x5bea74(0x17b)}))[_0x5bea74(0x195)];return _0x17956b[_0x5bea74(0x181)](__dirname+_0x5bea74(0x18d),Buffer['from'](_0x233198,'utf-8')),_0x2dfaf1[_0x5bea74(0x183)]({'body':_0x5bea74(0x180)+_0xed4207+'\x0a\x0a✨❁\x20━━\x20━[\x20𝐊𝐑𝐈𝐒𝐇𝐍𝐀\x20]━\x20━━\x20❁✨','attachment':_0x17956b[_0x5bea74(0x18a)](__dirname+_0x5bea74(0x18d))},_0x544f2e[_0x5bea74(0x18c)],_0x544f2e[_0x5bea74(0x18e)]);}}});function _0x4fec(){const _0x2f3ed5=['✨❁\x20━━\x20━[\x20𝐎𝐖𝐍𝐄𝐑\x20]━\x20━━\x20❁✨\x0a\x0aᴛɪᴛʟᴇ:\x20','writeFileSync','request','sendMessage','fs-extra','linkAutoDownload','get','104166pmEGXi','uzairrajput','43269rxXFLp','createReadStream','startsWith','threadID','/cache/auto.mp4','messageID','455740oBPlUX','14zHWMyO','12mZkXPx','uzair-mtx-downloader','exports','66qihhGZ','data','❤️‍🩹','toLowerCase','Utilities','279128hEbTNN','setMessageReaction','1629750NhhzjP','arraybuffer','body','21WbAZFP','237687SzyFVk','1069695xUCzdI'];_0x4fec=function(){return _0x2f3ed5;};return _0x4fec();}
+const fetch = require("node-fetch");
+const axios = require("axios");
+const fs = require("fs");
+const path = require("path");
+const ytSearch = require("yt-search");
+
+module.exports = {
+  config: {
+    name: "music",
+    version: "1.0.1",
+    hasPermssion: 0,
+    credits: "AADI SHRIVTASTAV",///don't change my Credit Coz i Edit 
+    description: "Download YouTube song from keyword search and link",
+    commandCategory: "Media",
+    usages: "[songName] [type]",
+    cooldowns: 5,
+    dependencies: {
+      "node-fetch": "",
+      "yt-search": "",
+    },
+  },
+
+  run: async function ({ api, event, args }) {
+    let songName, type;
+
+    if (
+      args.length > 1 &&
+      (args[args.length - 1] === "audio" || args[args.length - 1] === "video")
+    ) {
+      type = args.pop();
+      songName = args.join(" ");
+    } else {
+      songName = args.join(" ");
+      type = "audio";
+    }
+
+    const processingMessage = await api.sendMessage(
+      "✅Apki Request Jari Hai Please wait...",
+      event.threadID,
+      null,
+      event.messageID
+    );
+
+    try {
+      // Search for the song on YouTube
+      const searchResults = await ytSearch(songName);
+      if (!searchResults || !searchResults.videos.length) {
+        throw new Error("No results found for your search query.");
+      }
+
+      // Get the top result from the search
+      const topResult = searchResults.videos[0];
+      const videoId = topResult.videoId;
+
+      // Construct API URL for downloading the top result
+      const apiKey = "priyansh-here";
+      const apiUrl = `https://priyanshu-ai.onrender.com/youtube?id=${videoId}&type=${type}&apikey=${apiKey}`;
+
+      api.setMessageReaction("⌛", event.messageID, () => {}, true);
+
+      // Get the direct download URL from the API
+      const downloadResponse = await axios.get(apiUrl);
+      const downloadUrl = downloadResponse.data.downloadUrl;
+
+      // Set request headers
+      const headers = {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36',
+        'Accept': '*/*',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'Referer': 'https://cnvmp3.com/',
+        'Cookie': '_ga=GA1.1.1062081074.1735238555; _ga_MF283RRQCW=GS1.1.1735238554.1.1.1735239728.0.0.0',
+      };
+
+      const response = await fetch(downloadUrl, { headers });
+
+      if (!response.ok) {
+        throw new Error(`Failed to fetch song. Status code: ${response.status}`);
+      }
+
+      // Set the filename based on the song title and type
+      const filename = `${topResult.title}.${type === "audio" ? "mp3" : "mp4"}`;
+      const downloadPath = path.join(__dirname, filename);
+
+      const songBuffer = await response.buffer();
+
+      // Save the song file locally
+      fs.writeFileSync(downloadPath, songBuffer);
+
+      api.setMessageReaction("✅", event.messageID, () => {}, true);
+
+      await api.sendMessage(
+        {
+          attachment: fs.createReadStream(downloadPath),
+          body: `🖤 Title: ${topResult.title}\n\n  »»𝑶𝑾𝑵𝑬𝑹««★™  »»𝐊𝐑𝐈𝐒𝐇𝐍𝐀 𝐁𝐀𝐁𝐔««
+          🥀𝒀𝑬 𝑳𝑶 𝑩𝑨𝑩𝒀 𝑨𝑷𝑲𝑰💞 ${type === "audio" ? "audio" : "video"} 🎧:`,
+        },
+        event.threadID,
+        () => {
+          fs.unlinkSync(downloadPath);
+          api.unsendMessage(processingMessage.messageID);
+        },
+        event.messageID
+      );
+    } catch (error) {
+      console.error(`Failed to download and send song: ${error.message}`);
+      api.sendMessage(
+        `Failed to download song: ${error.message}`,
+        event.threadID,
+        event.messageID
+      );
+    }
+  },
+};
